@@ -1,4 +1,5 @@
 <?php
+namespace algo;
     /**
      * Created by PhpStorm.
      * User: Administrator

@@ -6,6 +6,14 @@
     "name": "Vincent",
     "email": "1254828234@qq.com"
   },
-  "require": {}
-
+  "require": {},
+  "autoload": {
+    "files": [
+      "algo/BinaryTree.php",
+      "algo/Node.php"
+    ],
+    "psr-4": {
+      "Algo\\": "algo/"
+    }
+  }
 }

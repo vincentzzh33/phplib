@@ -1,4 +1,5 @@
 <?php
+namespace algo;
 /**
  * Class BinaryTree
  * @package core\algo
