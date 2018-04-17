@@ -1,6 +1,11 @@
 {
-    "name": "vincentzzh33/phplib",
-    "type": "library",
-    "minimum-stability": "stable",
-    "require": {}
+  "name": "vincentzzh33/phplib",
+  "description": "phplib",
+  "minimum-stability": "stable",
+  "author": {
+    "name": "Vincent",
+    "email": "1254828234@qq.com"
+  },
+  "require": {},
+
 }
