@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+我是通过httpserver获取的
+<input type="text" id="mes">
+<button onclick="sendMes()">aaa</button>
+<div id="res"></div>
+<script>
+    var websocket = new WebSocket("ws://192.168.253.100:8812");
+
+    var msg = {};
+    msg.name = '我是客户端哈';
+
+    var res = document.getElementById('res');
+    websocket.onopen = function () {
+        console.log('websocket open');
+//        websocket.send(JSON.stringify(msg));//有消息发
+    };
+
+    websocket.onmessage = function (e) {
+//        var mes = JSON.parse(e.data);
+        res.innerHTML = res.innerHTML+e.data+"<br>";
+        console.log(e.data);
+    };
+
+    websocket.onclose = function () {
+        console.log('websocket close');
+    };
+
+    websocket.onerror = function (evt, e) {
+        console.log('websocket error' + evt.data);
+    };
+
+
+    function sendMes() {
+        var mes = document.getElementById('mes').value;
+        websocket.send(msg.name + mes);//有消息发
+    }
+
+
+</script>
+</body>
+</html>
